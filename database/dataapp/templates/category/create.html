@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Latest version as of now (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container p-5">
+        <div class="row">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="col-md-6 mx-auto">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Seq No</label>
+                        <input type="number" name="seqno" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input type="file" name="catImage" class="form-control">
+                    </div>
+                    <p class="text-danger">{{errorMsg}}</p>
+                    <button class="btn btn-primary" type="submit">Add</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

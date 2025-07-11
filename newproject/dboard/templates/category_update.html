@@ -1,0 +1,9 @@
+{% extends "masteradmin.html" %}
+{% block start %}
+<h2>Update Category</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-success">Update</button>
+</form>
+{% endblock %}

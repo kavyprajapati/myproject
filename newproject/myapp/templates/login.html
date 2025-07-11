@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 Form</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .rohit{
+        height: 500px;
+        width: 500px;
+        border: 1px solid red;
+        border-radius: 10px;
+        background-color: rgb(73, 141, 190);
+    }
+  </style>
+</head>
+<body>
+
+<div class=" rohit container mt-5">
+  <h2 class="text-center mt-5">login</h2>
+  <form>
+    <!-- First Name -->
+    <div class="mb-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+    </div>
+
+    <!-- Last Name -->
+    <div class="mb-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+    </div>
+
+    <!-- Username -->
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+    </div>
+    <a href="register.html" class="text-black">don't have an account?</a>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap 5 JavaScript and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Latest version as of now (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #sidebar {
+            min-height: 100vh;
+        }
+
+        #sidebar h4 {
+            font-weight: bold;
+        }
+
+        #sidebar .nav-link {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        #sidebar .nav-link:hover,
+        #sidebar .nav-link.active {
+            background-color: #495057;
+            color: #fff !important;
+        }
+
+        .card {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 15px 35px rgba(255, 106, 136, 0.25);
+        }
+
+        .btn-custom {
+            background: linear-gradient(to right, #ff6a88, #ffb199);
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            transition: 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: #fff;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #b24592;
+        }
+
+        .form-control:focus {
+            border-color: #f857a6;
+            box-shadow: 0 0 0 0.25rem rgba(248, 87, 166, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-speedometer2 me-2"></i>Admin Panel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Login Link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="/myadmin/login_p/">
+                            <i class="bi bi-person-circle me-1"></i> {{request.session.name}}
+                        </a>
+                    </li>
+                    <!-- Logout Link -->
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="/myadmin/logout/">
+                            <i class="bi bi-box-arrow-right me-1"></i>Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="d-flex">
+        <nav id="sidebar" class="bg-dark text-white p-3" style="width: 250px;">
+            <h4 class="mb-4"><i class="bi bi-grid-1x2-fill me-2"></i>Menu</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/myadmin/dashboard/"><i
+                            class="bi bi-house-door-fill me-2"></i>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/myadmin/user/"><i class="bi bi-people-fill me-2"></i>Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/myadmin/setting/"><i
+                            class="bi bi-gear-fill me-2"></i>Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/myadmin/category/">
+                        <i class="fa-solid fa-layer-group me-2"></i>Category</a>
+                </li>
+            </ul>
+        </nav>
+        {% block start %}
+        {% endblock %}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+<!-- def login(request):
+    if request.session.get("name"):
+        return redirect("/myadmin/dashboard")
+    if request.method == 'POST':
+        mstName = request.POST.get('mstName')
+        mstPassword = request.POST.get('mstPassword')
+        mstEmail = request.POST.get('mstEmail')
+        print(mstName)
+        print(mstPassword)
+        user = AdminUserMaster.objects.filter(mstName=mstName,mstPassword=mstPassword,mstEmail=mstEmail).first()
+        if user:
+            request.session["name"]=user.mstName
+            request.session["email"]=user.mstEmail
+            return redirect("/myadmin/dashboard/")
+        else:
+            return render(request, 'login_page.html', {'error': 'Invalid credentials'})
+    return render(request, 'login_page.html') -->

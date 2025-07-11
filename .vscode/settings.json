@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.port": 5501,
+    "livePreview.defaultPreviewPath": "/newproject/foodapp/templates/flowershopcontact.html",
+    "python.analysis.extraPaths": [
+        "./database"
+    ]
+}

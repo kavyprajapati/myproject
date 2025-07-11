@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signup Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .main {
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-romantic-beautiful-rose-flower-background-design-flower-backgroundplant-backgroundholiday-image_70028.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .signup-container {
+            margin-top: 80px;
+            background-image: url(https://marketplace.canva.com/EAGJJ8XrDHI/1/0/900w/canva-pink-pastel-floral-aesthetic-watercolor-background-instagram-story-Zvc539R9JOo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        h2 {
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            background-color: #004085;
+        }
+        .hed {
+
+            margin-bottom: 30px;
+        }
+
+        .bot {
+            background-color: beige;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hed py-3 main">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3>
+                    <b class="text-white">Flower Shop</b>
+                </h3>
+                <ul class="nav collapse show " id="menu">
+                    <li class="nav-item"><a href="website.html" class="nav-link fw-bold text-white">Home</a></li>
+                    <li class="nav-item"><a href="flowershopabout.html" class="nav-link fw-bold text-white">About us</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link fw-bold text-white">Shop</a></li>
+
+                    <li class="nav-item">
+                        <a href="flowershopcontact.html" class="nav-link fw-bold text-white ">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="flowershoplogin.html" class="btn btn-outline-dark rounded-pill fw-bold px-3 ms-3 text-white">Login</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-outline-dark  rounded-pill fw-bold  px-3 ms-md-3 text-white">Sign
+                            in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    <div class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 signup-container">
+                <h2 class="mb-4 text-center">Create Your Account</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" required />
+                    </div>
+                    <a href="{% url 'flowershoplogin.html' %}" class="text-black">alredy have an account!</a>
+                    <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </header>
+
+
+     <div class="bot py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div style="font-size: 25px;" class="fw-bold">Flower shop</div><br>
+                    <p>Welcome to the world of Florist, where flowers come to life with love and creativity. Discover
+                        our story, our passion for flowers, and our commitment to making every moment memorable.</p>
+                </div>
+
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-2">
+                    <div class="fw-bold">Links</div><br>
+                    <a href="#" class="text-dark text-decoration-none">Home</a> <br>
+                    <a href="#" class="text-dark text-decoration-none">About</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Shop</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Contact</a>
+                </div>
+
+
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-3">
+                    <div class="fw-bold">Contact Us</div><br>
+                    <div>Address: 13 Fifth Avenue, New York 101660</div>
+                    <div>Email: contact@info.com</div>
+                    <div>Phone: +91 987 654 321</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer border-top p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div>Copyright © 2025 Flower Shop</div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div>
+                        <i class="ms-5 fa-brands fa-facebook"></i>
+                        <i class="mx-2 fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="mx-2 fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

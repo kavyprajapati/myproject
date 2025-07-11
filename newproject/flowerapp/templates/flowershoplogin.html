@@ -1,0 +1,125 @@
+{%extends "masterweb.html"%}
+{% block start%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Login</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: bisque;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .bot {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .rohit {
+            height: 500px;
+            width: 500px;
+            border: 1px solid red;
+            border-radius: 10px;
+            background-color: rgb(73, 141, 190);
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" rohit container mt-5">
+        <h2 class="text-center mt-5">login</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Username -->
+            <div class="mb-3">
+                <label class="form-label w-100">Username</labelclass=>
+                    <input type="text" class="form-control" placeholder="Enter your username" name='username' required>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Enter your password" name='password' required>
+            </div>
+            <a href="{% url 'register' %}" class="text-black">don't have an account?</a> <br> <br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="bot py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div style="font-size: 25px;" class="fw-bold">Flower shop</div><br>
+                    <p>Welcome to the world of Florist, where flowers come to life with love and creativity. Discover
+                        our story, our passion for flowers, and our commitment to making every moment memorable.</p>
+                </div>
+
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-2">
+                    <div class="fw-bold">Links</div><br>
+                    <a href="#" class="text-dark text-decoration-none">Home</a> <br>
+                    <a href="#" class="text-dark text-decoration-none">About</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Shop</a><br>
+                    <a href="#" class="text-dark text-decoration-none">Contact</a>
+                </div>
+
+
+                <div class="col-md-1">
+
+                </div>
+
+                <div class="col-md-3">
+                    <div class="fw-bold">Contact Us</div><br>
+                    <div>Address: 13 Fifth Avenue, New York 101660</div>
+                    <div>Email: contact@info.com</div>
+                    <div>Phone: +91 987 654 321</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer border-top p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <div>Copyright © 2025 Flower Shop</div>
+                </div>
+
+
+                <div class="col-md-2">
+                    <div>
+                        <i class="ms-5 fa-brands fa-facebook"></i>
+                        <i class="mx-2 fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="mx-2 fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+{% endblock %}

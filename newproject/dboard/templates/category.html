@@ -1,0 +1,44 @@
+{%extends "masteradmin.html"%}
+{% block start%}
+<div class="flex-grow-1 p-4">
+  <h2 class="mb-4">catagory</h2>
+  <a href="/myadmin/category_add/" class="btn btn-success shadow-sm mb-4">Add New Catagory</a>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>No</th>
+          <th>CatagoryName</th>
+          <th>CatagoryImage</th>
+          <th>CatagoryStatus</th>
+          <th>CatagorySlug</th>
+          <th>CatagoryActions</th>
+        </tr>
+      </thead>
+      {% for table in tables%}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{table.Cate_name}}</td>
+        <td>
+          {{table.cate_image}}
+        </td>
+        <td>{{table.cate_status}}</td>
+        <td>{{table.cateslug}}</td>
+        <td>
+          <a href="{% url 'delte_category' table.id %}" class="btn btn-warning">Delete</a>
+          <button class="btn btn-danger">Update</button>
+        </td>
+
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+{% endblock %}
