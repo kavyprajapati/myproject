@@ -12,3 +12,4 @@ class cats(models.Model):
     cate_image = models.ImageField(upload_to="category_images")
     cate_status = models.BooleanField(default=True)
     cateslug = models.SlugField(null=True, blank=True)
+# pateldhyanu56@gmail.com    

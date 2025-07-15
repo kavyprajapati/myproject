@@ -81,3 +81,5 @@ def update(request, id):
         category.Cate_name = request.POST.get("Cate_name")
 
 
+
+
